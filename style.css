@@ -1,0 +1,156 @@
+/* Updated Deep Warm Wood Theme for Utility Toolkit */
+:root {
+    --primary-color: #f59e0b;     /* Warm amber accent */
+    --primary-hover: #d97706;     /* Darker amber for hovers */
+    --bg-color: #432616;          /* Your custom rich brown background */
+    --card-bg: #2d190e;           /* Deeper tint for container cards */
+    --text-main: #f8fafc;         /* Bright light cream text for high contrast */
+    --text-muted: #cbd5e1;        /* Muted light text for labels */
+    --border-color: #5c3722;      /* Subtle organic border outlines */
+    --input-bg: #1f110a;          /* Deep contrast background for inputs */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Desktop layout: Side-by-side sections */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Calculator Action Section */
+#inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputs label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+#inputs input {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#inputs input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+#calculateBtn {
+    background-color: var(--primary-color);
+    color: #1e293b;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 8px;
+}
+
+#calculateBtn:hover {
+    background-color: var(--primary-hover);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--input-bg);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* Tool Selection Menu Section */
+#button h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: var(--text-main);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+#buttons button {
+    background-color: var(--input-bg);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 14px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+#buttons button:hover {
+    background-color: var(--primary-color);
+    color: #1e293b;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+#buttons button:active {
+    transform: translateY(0);
+}
